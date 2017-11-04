@@ -37,8 +37,60 @@
     </header>
 
     <main>
+        <br><br><br><br><br><br><br><br>
+        <div class="container lefttext">
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <g:img dir="images/res" file="dogs3.jpg" class="img-fluid"/>
 
-        This is upload Form page!
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body card-body-padded">
+                            <!--Title-->
+                            <h3 class="card-title">Please complete all fields</h3>
+                            <!--Text-->
+                            <div class="md-form">
+                                <input type="text" id="form0" class="form-control" name="firstName" required>
+                                <label for=form0 class="">First name</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="text" id="form1" class="form-control" name="lastName" required>
+                                <label for=form1 class="">Last name</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="email" id="form2" class="form-control" name="email" required>
+                                <label for=form2 class="">Email Address</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="email" id="form3" class="form-control" required>
+                                <label for="form3" class="">Confirm email</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="password" id="form5" class="form-control" name="password" required>
+                                <label for="form5" class="">Password</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="password" id="form6" class="form-control"  required>
+                                <label for="form6" class="">Confirm password</label>
+                            </div>
+
+                            <input class ="subBtn"type="submit" name ="register" value="Register">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <g:javascript src="bootstrap.js" />
     <g:javascript src="bootstrap.min.js"/>
