@@ -1,0 +1,176 @@
+body{
+
+    background-color: rgb(246, 255, 79);
+    
+}
+
+.btn-y{
+    background-color: rgb(246, 255, 79);
+    color: #000000!important;
+    font-size: 20px;
+    
+}
+
+.btn-y-active{
+    background-color: rgb(255, 223, 79);
+    color: #000000!important;
+    font-size: 20px;
+}
+
+#myname {
+    font-size: 1em;
+}
+
+.main-bg{
+    background-image: url("img/res/dogs2.jpg");
+
+}
+
+.spaced{
+    
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-around; /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-between;
+}
+
+#resume{
+    text-align: right;
+
+}
+
+.brandtxt{
+    /* margin: 20px 0px 0px 0px; */
+    vertical-align: middle;
+} 
+.btn-resume{
+    vertical-align: middle;
+    font-size: 11px;
+    padding:6px 4px 4px 4px ;
+    margin: 0px 0px 11.25px 0px;
+
+}
+
+.subBtn{
+    background-color: #4584be;
+    color: #ffffff;
+    font-family: Roboto,sans-serif;
+    font-size: 20px;
+
+    border: 0;
+    /* background: none; */
+    box-shadow:none;
+    border-radius: 3px;
+    cursor: pointer;
+    
+    
+}
+
+.downTxt{
+    padding:10px 0px 0px 0px ;
+}
+
+.card-body-padded{
+    padding:20px;
+
+}
+.img-logo{
+    width: 90px;
+    height: 108px;
+}
+
+.bignav{
+    width: 40px;
+    height: 40px;
+    margin: 0px 0px 11.25px 0px; 
+}
+
+
+.homeBar{
+    background-color: #4584be;
+    font-weight: 5px;
+}
+
+.midtext{
+    text-align: left;
+}
+
+.lefttext{
+    text-align: center;
+}
+.righttext{
+    text-align: right;
+}
+
+.navtitle{
+    font-size: 70px;
+}
+
+.darkText{
+    color: #000000;
+}
+
+.badge-light{
+    background-color: rgba(96, 173, 209, 0.34);
+    padding: 3px 9px 3px;
+    font-size: 14px;
+    font-weight: 300;
+    
+    font-family: Roboto,sans-serif;
+    white-space: nowrap;
+    color: #000000;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    line-height: 30px;
+}
+
+.badge-light-link{
+    background-color: rgba(96, 173, 209, 0.34);
+    padding: 3px 9px 3px;
+    font-size: 14px;
+    font-weight: 300;
+    
+    font-family: Roboto,sans-serif;
+    white-space: nowrap;
+    color: #1900ff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    line-height: 30px;
+}
+
+.badge-job{
+    background-color: rgba(167, 225, 252, 0.34);
+    padding: 3px 9px 3px;
+    font-size: 16px;
+    font-weight: 300;
+    
+    font-family: Roboto,sans-serif;
+    white-space: nowrap;
+    color: #000000;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    line-height: 30px;
+}
+
+.paddedIMG{
+    padding: 5px 5px;
+}
+
+
+.paddedIMG-heavy{
+    padding: 30px 30px 10px 30px ;
+     
+}
+
+.centBtn{
+    vertical-align: bottom;
+    padding:50px 0px 0px 0px ;
+        
+}
+
+.centCard{
+    text-align: center;
+}
