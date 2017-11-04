@@ -29,61 +29,66 @@
       <Position>3</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="14" parent="9" name="hash_value">
+    <column id="14" parent="9" name="document_classification">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
-    </column>
-    <column id="15" parent="9" name="user_id">
-      <Position>5</Position>
-      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="16" parent="9" name="PRIMARY">
+    <column id="15" parent="9" name="document_title">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="9" name="hash_value">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="17" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="17" parent="10" name="id">
+    <column id="18" parent="10" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="18" parent="10" name="version">
+    <column id="19" parent="10" name="version">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="19" parent="10" name="balance">
+    <column id="20" parent="10" name="balance">
       <Position>3</Position>
       <DataType>double|0</DataType>
     </column>
-    <column id="20" parent="10" name="date_registered">
+    <column id="21" parent="10" name="date_registered">
       <Position>4</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="21" parent="10" name="email">
+    <column id="22" parent="10" name="email">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="22" parent="10" name="first_name">
+    <column id="23" parent="10" name="first_name">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="23" parent="10" name="last_name">
+    <column id="24" parent="10" name="last_name">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="24" parent="10" name="password">
+    <column id="25" parent="10" name="password">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="25" parent="10" name="user_id">
+    <column id="26" parent="10" name="user_id">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="26" parent="10" name="PRIMARY">
+    <key id="27" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

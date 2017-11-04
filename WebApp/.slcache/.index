@@ -4665,3 +4665,8 @@ n:8284:org/bitcoinj/core/TransactionBroadcast
 n:686:com/intellij/rt/execution/application/AppMainV2$Agent
 y:4909:com/intellij/rt/execution/application/AppMainV2
 n:1552:com/intellij/rt/execution/application/AppMainV2$1
+n:510:org/springframework/web/multipart/MultipartFile
+n:503:org/springframework/web/multipart/MultipartHttpServletRequest
+n:912:org/springframework/web/multipart/MultipartRequest
+n:799:sl/org/objectweb/asm/tree/MultiANewArrayInsnNode
+n:1800:sl/org/objectweb/asm/tree/FrameNode

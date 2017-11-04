@@ -74,7 +74,7 @@
                                     </div>
                                     <br>
                                 </g:if>
-                                <input class ="subBtn"type="submit" name="submit" value="Submit">
+                                <input class ="subBtn" type="submit" name="submit" value="Submit">
                             </div>
                         </form>
                     </div>
@@ -82,7 +82,8 @@
                 <div class="col-md-3">
                 </div>
             </div>
-
+        </div>
+    </div>
 </main>
 <g:javascript src="bootstrap.js" />
 <g:javascript src="bootstrap.min.js"/>

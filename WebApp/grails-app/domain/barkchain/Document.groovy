@@ -3,11 +3,11 @@ package barkchain
 class Document {
 
     String hashValue
-    int userId
     Date dateUploaded
+    String documentTitle
+    String documentClassification
     static constraints = {
         dateUploaded nullable:true
-        userId nullable:true
         hashValue nullable:true
     }
 }
