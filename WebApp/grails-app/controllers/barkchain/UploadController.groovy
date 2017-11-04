@@ -2,5 +2,11 @@ package barkchain
 
 class UploadController {
 
-    def index() { }
+    def index() {
+        redirect action:'uploadForm'
+    }
+
+    def uploadForm(){
+
+    }
 }

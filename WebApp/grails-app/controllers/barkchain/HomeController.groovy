@@ -1,9 +1,10 @@
 package barkchain
 
 class HomeController {
+
 def loginService
     def index() {
-        User user=null
+        def user=null
         println(params)
         if (params.containsKey('login')) {
             redirect action: "login"
@@ -13,7 +14,7 @@ def loginService
         }
         if (params.containsKey('loginSuccess')){
             //logged in
-            user=params.User
+            user=params['User']
         }
 
         [user:user]
@@ -21,39 +22,48 @@ def loginService
 
     def login() {
         //login
+        println(params)
         def errorMsg=null
-        if (params.submit)//if login is called
+        if (params.containsKey('submit'))//if login is called
         {
-            User user=User.findByUserName(params.userName)
+            User user=User.findByEmail(params.email)
             if (user) {
                 //User is found!
                 if (user.password == params.password) {
                     params.put('loginSuccess',true)
                     params.put('User',user)
-                   redirect controller: 'Home', action: 'index', params:params
+                   redirect controller: 'upload', action: 'uploadForm', params:params
+                }
+                else{
+                    println("Not found!")
+                    errorMsg="User not found with entered Username and Password "
                 }
             }
             else
             {
                 println("Not found!")
-                errorMsg="User not found with entered Username and Password "
+                errorMsg="Wrong username and password combination "
             }
         }
         [errorMsg:errorMsg]
     }
     def register(){
+        println (params)
         if (params.containsKey('register')) {
             //save the user
-            User newUser = null
+            User newUser=new User()
             newUser.balance = 100
             newUser.password = params.password
-            newUser.userName = params.userName
             newUser.firstName = params.firstName
             newUser.lastName = params.lastName
+            newUser.email=params.email
             newUser.dateRegistered = new Date()
             newUser.save()
             redirect action: 'login'
         }
+
+    }
+    def about(){
 
     }
 }

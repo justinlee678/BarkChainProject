@@ -1,16 +1,29 @@
 body{
 
     background-color: rgb(246, 255, 79);
+
 }
 
 .btn-y{
     background-color: rgb(246, 255, 79);
     color: #000000!important;
-    font-size: 20px
+    font-size: 20px;
+
+}
+
+.btn-y-active{
+    background-color: rgb(255, 187, 25);
+    color: #000000!important;
+    font-size: 20px;
 }
 
 #myname {
     font-size: 1em;
+}
+
+.main-bg{
+    background-image: url("img/res/dogs2.jpg");
+
 }
 
 .spaced{
@@ -42,6 +55,14 @@ body{
     background-color: #4584be;
     color: #ffffff;
     font-family: Roboto,sans-serif;
+    font-size: 20px;
+
+    border: 0;
+    /* background: none; */
+    box-shadow:none;
+    border-radius: 3px;
+    cursor: pointer;
+
 
 }
 
@@ -50,7 +71,7 @@ body{
 }
 
 .card-body-padded{
-    padding: 5px 5px 5px 5px;
+    padding:20px;
 
 }
 .img-logo{
