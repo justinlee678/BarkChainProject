@@ -7,6 +7,7 @@ class UploadController {
     }
 
     def uploadForm(){
-
+        def userFirstName=params.UserFirstName?:null
+        [userFirstName:userFirstName]
     }
 }

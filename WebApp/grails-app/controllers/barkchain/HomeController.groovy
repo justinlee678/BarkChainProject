@@ -30,8 +30,8 @@ def loginService
             if (user) {
                 //User is found!
                 if (user.password == params.password) {
-                    params.put('loginSuccess',true)
-                    params.put('User',user)
+                    params.put('UserFirstName',user.firstName)
+                    params.password="********"
                    redirect controller: 'upload', action: 'uploadForm', params:params
                 }
                 else{

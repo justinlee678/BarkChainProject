@@ -29,6 +29,7 @@
                 </span>
 
                 <span class="centBtn">
+                    <span style="color:white; font-size:200%;"><b>Hello ${userFirstName}</b></span>
                     <g:link controller="home" action="index" class="btn btn-y-active">Logout</g:link>
                     <g:link controller="home" action="validate" class="btn btn-y">Validate</g:link>
                 </span>
@@ -37,8 +38,8 @@
     </header>
 
     <main>
-
-        This is upload Form page!
+        <br><br><br><br><br><br><br><br>
+    <input type="file" name="myFile">
     </main>
     <g:javascript src="bootstrap.js" />
     <g:javascript src="bootstrap.min.js"/>

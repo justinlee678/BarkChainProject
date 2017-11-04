@@ -41,7 +41,7 @@
     <main>
         <br><br><br><br><br><br><br><br>
         <div class="container lefttext">
-            <h1>A blockchain solution for pet documents. </h1>
+            <h1>Worried about the history of your pet? We can help.</h1>
         </div>
         <div class="row">
 

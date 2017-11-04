@@ -71,18 +71,9 @@
                                 <label for=form2 class="">Email Address</label>
                             </div>
                             <div class="md-form">
-                                <input type="email" id="form3" class="form-control" required>
-                                <label for="form3" class="">Confirm email</label>
-                            </div>
-                            <div class="md-form">
                                 <input type="password" id="form5" class="form-control" name="password" required>
                                 <label for="form5" class="">Password</label>
                             </div>
-                            <div class="md-form">
-                                <input type="password" id="form6" class="form-control"  required>
-                                <label for="form6" class="">Confirm password</label>
-                            </div>
-
                             <input class ="subBtn"type="submit" name ="register" value="Register">
                         </div>
                     </div>
