@@ -20,6 +20,7 @@ def loginService
     }
 
     def login() {
+        //login
         def errorMsg=null
         if (params.submit)//if login is called
         {
