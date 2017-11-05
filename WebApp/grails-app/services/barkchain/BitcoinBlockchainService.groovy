@@ -2,7 +2,6 @@ package barkchain
 
 import com.google.common.util.concurrent.FutureCallback
 import com.google.common.util.concurrent.Futures
-import grails.transaction.Transactional
 import org.bitcoinj.core.Address
 import org.bitcoinj.core.Coin
 import org.bitcoinj.core.ECKey
@@ -16,18 +15,14 @@ import org.bitcoinj.script.ScriptBuilder
 import org.bitcoinj.wallet.SendRequest
 import org.bitcoinj.wallet.Wallet
 import org.bitcoinj.wallet.listeners.WalletCoinsReceivedEventListener
+import com.google.common.util.concurrent.AbstractIdleService
 
-import java.security.MessageDigest
+class BitcoinBlockchainService {
 
-@Transactional
-class UploadToBlockChainService {
-
-    def addDocumentToBlockchain(File document) throws InsufficientMoneyException,Wallet.DustySendRequested{
-        def receipt=['TransactionID': null,"Date":null,]
-
+    def sendTransaction(hash) throws InsufficientMoneyException, Wallet.DustySendRequested{
+        def receipt=['transactionId':null, 'blockChainDate':null]
         NetworkParameters params = TestNet3Params.get()
-
-        WalletAppKit kit = new WalletAppKit(params, new File("."), "BitcoinWallet"){
+        WalletAppKit kit = new WalletAppKit(params, new File("."), "BarkChainWallet"){
             @Override
             protected void onSetupCompleted() {
                 // This is called in a background thread after startAndWait is called, as setting up various objects
@@ -38,6 +33,7 @@ class UploadToBlockChainService {
                 println(wallet())
             }
         }
+
         //Start syncing the wallet with the peers in the bitcoin network
         kit.startAsync()
         kit.awaitRunning()
@@ -52,33 +48,17 @@ class UploadToBlockChainService {
         println("ALL TRANSACTIONS: ")
         println(kit.wallet().getTransactionsByTime())
 
-        /////////////////////////////////////CREATE A HASH OF THE FILE//////////////////////////////////
-        MessageDigest digest = MessageDigest.getInstance("SHA-256")
-        def inputStream = document.newDataInputStream()
-
-        byte[] buffer = new byte[8192]
-        int read = 0
-        while ((read = inputStream.read(buffer)) > 0) {
-            digest.update(buffer, 0, read);
-        }
-
-        byte[] md5sum = digest.digest()
-        BigInteger bigInt = new BigInteger(1, md5sum)
-        def hash = bigInt.toString(16).padLeft(32, '0')
-
-
-
-
-        Address recipient1 = new Address(params, "mvyCcVN6zKujmhKfar1QuLTzD8WLMVCQBc")
+        byte[] OpReturnValue = (hash.getBytes())
+        println("***********************The Embedded Message is: "+hash+"*****************************")
+        Address recipient1 = new Address(params, "msUhcQEpJMA8UCMwjV514aV32BTYjsKqzB")
         Coin txValue = Coin.parseCoin("0.005")
-
 
         //create transaction
         Transaction trans = new Transaction(params)
         Wallet.SendResult result
         try {
             trans.addOutput(txValue,recipient1)
-            trans.addOutput(Coin.ZERO, ScriptBuilder.createOpReturnScript())
+            trans.addOutput(Coin.ZERO, ScriptBuilder.createOpReturnScript(OpReturnValue))
             /////////////Print all the transaction information
             println("Transaction :"+trans)
             // send it to the bitcoin network
@@ -86,8 +66,8 @@ class UploadToBlockChainService {
             /////////Print the result of the transaction
             println("Send Result"+result)
 
-            record.transactionId=result.tx.hash
-            record.blockChainDate=result.tx.updateTime
+            receipt['transactionId']=result.tx.hash
+            receipt['blockChainDate']=result.tx.updateTime
 
         }catch(Wallet.DustySendRequested e)
         {
@@ -100,11 +80,7 @@ class UploadToBlockChainService {
 //        if (result.broadcastComplete)
 //        kit.stopAsync()
 //        kit.awaitTerminated()
-
-        //Receiving money
-
-
-        return
+        println("The receipt is: "+receipt)
+        return receipt
     }
-    }
-
+}

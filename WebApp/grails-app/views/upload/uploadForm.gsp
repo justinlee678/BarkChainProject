@@ -31,7 +31,7 @@
                 </g:link>
             </span>
             <span class="centBtn">
-                <span style="color:white; font-size:200%;"><b>Hello ${userFirstName}</b></span>
+                <span style="color:white; font-size:200%;"><b>Hello ${user.firstName}</b></span>
                 <g:link controller="home" action="index" class="btn btn-y-active">Logout</g:link>
                 <g:link controller="home" action="validate" class="btn btn-y">Validate</g:link>
             </span>
@@ -111,6 +111,9 @@
             </div>
         </div>
     </div>
+    <input type="hidden" name="firstName" value="${user.firstName}"/>
+    <input type="hidden" name="lastName" value="${user.lastName}"/>
+    <input type="hidden" name="email" value="${user.email}"/>
 </g:uploadForm>
 </main>
 <g:javascript src="bootstrap.js" />

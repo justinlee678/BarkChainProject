@@ -1,7 +1,6 @@
 package barkchain
 
 class HomeController {
-
 def loginService
     def index() {
         def user=null
@@ -30,7 +29,9 @@ def loginService
             if (user) {
                 //User is found!
                 if (user.password == params.password) {
-                    params.put('UserFirstName',user.firstName)
+                    params.put('firstName',user.firstName)
+                    params.put('lastName',user.lastName)
+                    params.put('email',user.email)
                     params.password="********"
                    redirect controller: 'upload', action: 'uploadForm', params:params
                 }
@@ -64,6 +65,9 @@ def loginService
 
     }
     def about(){
+
+    }
+    def validate(){
 
     }
 }
