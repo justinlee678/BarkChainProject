@@ -174,3 +174,7 @@ body{
 .centCard{
     text-align: center;
 }
+
+.card-about{
+    text-align:justify;
+}
