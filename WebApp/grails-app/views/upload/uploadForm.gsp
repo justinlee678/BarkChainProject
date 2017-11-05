@@ -19,6 +19,7 @@
 <script>
     function showFileName(el) {
         $('#upload-file-info').html(el.files[0].name);
+        $('input[name="fileName"]').val(el.files[0].name);
     }
 </script>
 <g:uploadForm action="uploadForm" method="post">
@@ -81,9 +82,7 @@
                             <span class='label label-info' id="upload-file-info">No document chosen</span>
                             <br>
                         </div>
-
                     </div>
-
                 </div>
                 <div class="col-md-3">
                 </div>
@@ -114,6 +113,7 @@
     <input type="hidden" name="firstName" value="${user.firstName}"/>
     <input type="hidden" name="lastName" value="${user.lastName}"/>
     <input type="hidden" name="email" value="${user.email}"/>
+    <input type="hidden" name="fileName"/>
 </g:uploadForm>
 </main>
 <g:javascript src="bootstrap.js" />

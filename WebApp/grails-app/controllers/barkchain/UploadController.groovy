@@ -14,8 +14,10 @@ class UploadController {
     }
 
     def uploadForm() {
+        println(params)
         def hash
         def receipt
+        Document doc = new Document()
         def errorMsg=null
         def user=['firstName':params.firstName,'lastName':params.lastName,'email':params.email]
         if(params.myFile) {
@@ -23,9 +25,7 @@ class UploadController {
                 for (filename in request.getFileNames()) {
                     MultipartFile currentFile = request.getFile(filename)
                      hash=hashFileService.getHash(null,currentFile)
-                }
-            }
-            Document doc = new Document()
+            doc.documentName=params.fileName
             doc.hashValue = hash
             doc.documentTitle = params.docName
             doc.documentClassification = params.docClass
@@ -33,14 +33,18 @@ class UploadController {
             doc.email=params.email
             doc.firstName=params.firstName
             doc.lastName=params.lastName
+                }
+            }
             try {
                 receipt = bitcoinBlockchainService.sendTransaction(hash)
             }
             catch (InsufficientMoneyException e){
                 errorMsg='Error occured. You do not have enough money'
+                return
             }
             catch (Wallet.DustySendRequested e){
                 errorMsg='Error occured. Dust rule of the blockchain violated'
+                return
             }
             doc.addedToBlockchainDate=receipt.blockChainDate
             doc.transactionId=receipt.transactionId

@@ -78,8 +78,6 @@ class BitcoinBlockchainService {
         println("Process Finished")
         //
 //        if (result.broadcastComplete)
-//        kit.stopAsync()
-//        kit.awaitTerminated()
         println("The receipt is: "+receipt)
         return receipt
     }

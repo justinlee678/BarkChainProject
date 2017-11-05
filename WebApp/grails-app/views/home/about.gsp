@@ -65,9 +65,7 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-6">
-
                 <!-- card 2 -->
                 <div class="card">
                     <div class="view overlay hm-white-slight">
@@ -82,26 +80,16 @@
                     <div class="card-block">
                         <h1>What is blockchain and why is it so powerful? </h1><br>
                         <h3>
-                            Blockchain is a distributed database, meaning every participating computer must record every transaction made between users.<br><br> When you upload a document to BarkChain (be it a <b>certificate of pedigree, vaccination</b>, and so on), the document is secured through encryption and is stored as a fixed-sized string of characters (called a hash) on every connected computer's copy of the blockchain.
+                            Blockchain is a distributed database, meaning every participating computer must record every transaction made between users.<br><br> When you upload a document to BarkChain (be it a <b>certificate of pedigree, vaccination</b>, and so on), the digital fingerprint (called <b>hash</b>) of the document will be stored on every connected computer's copy of the blockchain.
                         </h3>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-
     <div class="row">
         <div class="container lefttext">
-
-
-            <!-- <div class="col-md-1">
-
-                </div> -->
-
             <div class="col-lg-12">
-
                 <br><br>
             <h1><b>
                 How does it work?</b>
@@ -115,14 +103,7 @@
                         </a>
                     </div>
                 </div>
-
-
             </div>
-
-            <!-- <div class="col-md-1">
-
-                </div>
- -->
         </div>
     </div>
 </main>

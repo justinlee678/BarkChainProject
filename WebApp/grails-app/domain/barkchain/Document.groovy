@@ -9,6 +9,7 @@ class Document {
     String transactionId
     String hashValue
     Date dateUploaded
+    String documentName
     String documentTitle
     String documentClassification
     static constraints = {

@@ -38,78 +38,83 @@
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="16" parent="9" name="document_title">
+    <column id="16" parent="9" name="document_name">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="17" parent="9" name="email">
+    <column id="17" parent="9" name="document_title">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="18" parent="9" name="first_name">
+    <column id="18" parent="9" name="email">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="19" parent="9" name="hash_value">
+    <column id="19" parent="9" name="first_name">
       <Position>9</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="20" parent="9" name="last_name">
+    <column id="20" parent="9" name="hash_value">
       <Position>10</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="21" parent="9" name="transaction_id">
+    <column id="21" parent="9" name="last_name">
       <Position>11</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="22" parent="9" name="PRIMARY">
+    <column id="22" parent="9" name="transaction_id">
+      <Position>12</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="23" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="23" parent="10" name="id">
+    <column id="24" parent="10" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="24" parent="10" name="version">
+    <column id="25" parent="10" name="version">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="10" name="balance">
+    <column id="26" parent="10" name="balance">
       <Position>3</Position>
       <DataType>double|0</DataType>
     </column>
-    <column id="26" parent="10" name="date_registered">
+    <column id="27" parent="10" name="date_registered">
       <Position>4</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="27" parent="10" name="email">
+    <column id="28" parent="10" name="email">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="28" parent="10" name="first_name">
+    <column id="29" parent="10" name="first_name">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="29" parent="10" name="last_name">
+    <column id="30" parent="10" name="last_name">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="30" parent="10" name="password">
+    <column id="31" parent="10" name="password">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="31" parent="10" name="user_id">
+    <column id="32" parent="10" name="user_id">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="32" parent="10" name="PRIMARY">
+    <key id="33" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
